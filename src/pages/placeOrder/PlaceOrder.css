@@ -1,0 +1,63 @@
+.placeorder-main {
+  min-height: 100vh;
+  background: #f6f7fb;
+  font-family: 'Inter', sans-serif;
+
+  
+}
+
+body.dark .placeorder-main {
+  background: #181c24;
+}
+
+.placeorder-card {
+  border-radius: 1.5rem !important;
+  background: #fff !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04) !important;
+  border: none !important;
+  transition: background 0.3s;
+}
+
+body.dark .placeorder-card {
+  background: #232a36 !important;
+  color: #eaeaea !important;
+}
+
+.placeorder-summary-card {
+  background: #f8f9fa !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04) !important;
+  border: none !important;
+  padding: 1.5rem !important;
+}
+
+body.dark .placeorder-summary-card {
+  background: #232a36 !important;
+  color: #eaeaea !important;
+}
+
+.placeorder-btn-gradient {
+  background: linear-gradient(90deg, #0d6efd 60%, #198754 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  border-radius: 2rem !important;
+  transition: background 0.2s;
+}
+
+.placeorder-btn-gradient:hover {
+  background: linear-gradient(90deg, #198754 60%, #0d6efd 100%) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  .placeorder-main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .placeorder-card,
+  .placeorder-summary-card {
+    padding: 1.2rem 0.5rem !important;
+  }
+}

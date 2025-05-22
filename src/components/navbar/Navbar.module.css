@@ -1,0 +1,95 @@
+/* Navbar background and shadow */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s;
+}
+
+body.dark .navbar {
+  background: #181c24;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+/* Brand */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222 !important;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+body.dark .navbar-brand {
+  color: #fff !important;
+}
+
+/* Nav links */
+.nav-link {
+  color: #222 !important;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+body.dark .nav-link {
+  color: #eaeaea !important;
+}
+body.dark .nav-link.active,
+body.dark .nav-link:focus,
+body.dark .nav-link:hover {
+  color: #4f8cff !important;
+}
+
+/* Cart badge */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4em 0.7em;
+}
+
+/* Login button gradient */
+.btn-gradient {
+  background: linear-gradient(90deg, #0d6efd 60%, #198754 100%);
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 2rem;
+  transition: background 0.2s;
+}
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #198754 60%, #0d6efd 100%);
+  color: #fff !important;
+}
+
+/* Register button */
+.btn-outline-primary {
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline-primary:hover {
+  background: #0d6efd;
+  color: #fff !important;
+  border-color: #0d6efd;
+}
+.dropdown-menu {
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .navbar-nav {
+    gap: 0.5rem !important;
+  }
+  .d-flex.align-items-center.gap-2.ms-lg-4.mt-3.mt-lg-0 {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+    gap: 0.5rem !important;
+  }
+}

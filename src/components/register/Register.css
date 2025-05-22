@@ -1,0 +1,121 @@
+.card {
+  margin: 0;
+}
+
+/* Reset and base styles */
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: #fff;
+  transition: background 0.3s;
+}
+
+/* Form floating styles - crucial for consistent backgrounds */
+.login-card .form-floating {
+  background: transparent;
+  margin-bottom: 1rem;
+}
+
+.login-card .form-floating > .form-control {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem;
+  background: #f6f7fb;
+  border: 1px solid #eaeaea;
+  border-radius: 0.7rem;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.login-card .form-floating > .form-control:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background: #f6f7fb;
+}
+
+.login-card .form-floating > label {
+  padding: 1rem 0.75rem;
+  color: #666;
+}
+
+/* Dark mode styles */
+body.dark .login-card {
+  background: #181c24;
+  color: #eaeaea;
+}
+
+body.dark .login-card .form-floating > .form-control {
+  background: #232a36;
+  border-color: #232a36;
+  color: #eaeaea;
+}
+
+body.dark .login-card .form-floating > .form-control:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 0.25rem rgba(79, 140, 255, 0.25);
+}
+
+body.dark .login-card .form-floating > label {
+  color: #b0b8c1;
+}
+
+/* Button styles */
+.btn-login {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.app-btn-gradient {
+  background: linear-gradient(90deg, #0d6efd 60%, #198754 100%);
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 2rem;
+  transition: background 0.2s;
+}
+.app-btn-gradient:hover {
+  background: linear-gradient(90deg, #198754 60%, #0d6efd 100%);
+  color: #fff !important;
+}
+
+/* Social login buttons */
+.btn-google {
+  background-color: #ea4335 !important;
+  color: #fff !important;
+}
+
+.btn-google:hover {
+  background-color: #d93025 !important;
+  color: #fff !important;
+}
+
+.btn-facebook {
+  background-color: #3b5998 !important;
+  color: #fff !important;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373 !important;
+  color: #fff !important;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 1.2rem 1rem;
+  }
+}

@@ -1,0 +1,73 @@
+.card {
+  margin: 0;
+}
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: #fff;
+  transition: background 0.3s;
+}
+
+body.dark .login-card {
+  background: #181c24;
+  color: #eaeaea;
+}
+
+.btn-login {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.app-btn-gradient {
+  background: linear-gradient(90deg, #0d6efd 60%, #198754 100%);
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 2rem;
+  transition: background 0.2s;
+}
+.app-btn-gradient:hover {
+  background: linear-gradient(90deg, #198754 60%, #0d6efd 100%);
+  color: #fff !important;
+}
+
+.btn-google {
+  background-color: #ea4335 !important;
+  color: #fff !important;
+}
+
+.btn-google:hover {
+  background-color: #d93025 !important;
+  color: #fff !important;
+}
+
+.btn-facebook {
+  background-color: #3b5998 !important;
+  color: #fff !important;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373 !important;
+  color: #fff !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 1.2rem 0.5rem;
+  }
+}

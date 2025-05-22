@@ -1,0 +1,18 @@
+.contact-card {
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: #fff;
+  transition: background 0.3s;
+  margin-bottom: 2rem;
+}
+
+body.dark .contact-card {
+  background: #181c24;
+  color: #eaeaea;
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 1.2rem 0.5rem;
+  }
+}
