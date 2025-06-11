@@ -1,0 +1,125 @@
+.not-found-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-content h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.not-found-content p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.action-buttons .btn {
+  min-width: 160px;
+}
+
+.action-buttons .btn i {
+  margin-right: var(--spacing-xs);
+}
+
+.illustration {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.illustration img {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .not-found-page {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.illustration img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 100px;
+  }
+
+  .not-found-content h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .not-found-content p {
+    font-size: var(--font-size-base);
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 80px;
+  }
+
+  .not-found-content {
+    padding: 0 var(--spacing-md);
+  }
+
+  .illustration {
+    max-width: 300px;
+  }
+}

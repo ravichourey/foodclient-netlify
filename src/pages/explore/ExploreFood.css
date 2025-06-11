@@ -1,61 +1,72 @@
 .explore-main {
-  font-family: 'Inter', sans-serif;
-  background: #f6f7fb;
   min-height: 100vh;
-}
-
-body.dark .explore-main {
-  background: #181c24;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md) 0;
 }
 
 .explore-search-card {
-  border-radius: 1.5rem;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.explore-search-card .form-select,
+.explore-search-card .form-control {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.explore-search-card .form-select:focus,
+.explore-search-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+.explore-search-card .form-select option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app-btn-gradient {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+  color: var(--text-light);
   border: none;
-  transition: background 0.3s;
+  transition: all var(--transition-normal);
 }
 
-body.dark .explore-search-card {
-  background: #232a36;
+.app-btn-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-primary);
 }
 
-.input-group .form-select,
-.input-group .form-control {
-  border-radius: 2rem 0 0 2rem;
-  border: 1px solid #eaeaea;
-  background: #f6f7fb;
-  transition: background 0.3s, border-color 0.3s;
+/* Dark mode support */
+[data-theme="dark"] .explore-main {
+  background-color: var(--bg-secondary);
 }
 
-.input-group .form-control {
-  border-radius: 0;
+[data-theme="dark"] .explore-search-card {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
 }
 
-.input-group .form-select {
-  border-radius: 2rem 0 0 2rem;
+[data-theme="dark"] .explore-search-card .form-select,
+[data-theme="dark"] .explore-search-card .form-control {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
-.input-group .btn.app-btn-gradient {
-  border-radius: 0 2rem 2rem 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: none;
-  min-width: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+[data-theme="dark"] .explore-search-card .form-select option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
-body.dark .input-group .form-select,
-body.dark .input-group .form-control {
-  background: #181c24;
-  color: #eaeaea;
-  border-color: #232a36;
-}
-
-@media (max-width: 600px) {
-  .explore-search-card {
-    padding: 1.2rem 0.5rem;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .explore-main {
+    padding: var(--spacing-sm) 0;
   }
 }

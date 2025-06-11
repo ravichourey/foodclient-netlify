@@ -7,61 +7,58 @@ const FoodItem = ({ name, price, description, id, imageUrl }) => {
   const { increaseQty, decreaseQty, quantity } = useContext(StoreContext);
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
-      <div className="app-card food-card h-100 text-decoration-none">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div className="food-card">
         <div className="food-img-wrapper">
-          <Link to={`/food/${id}`} tabIndex={-1}></Link>
           <img src={imageUrl} alt={name} className="food-img" />
         </div>
-        <div className="card-body d-flex flex-column">
-          <h5 className="card-title fw-bold d-flex align-items-center gap-2">
-            <i className="bi bi-egg-fried text-warning"></i> {name}
+        <div className="card-body">
+          <h5 className="card-title">
+            <i className="bi bi-egg-fried"></i>
+            {name}
           </h5>
-          <p className="card-text text-secondary small flex-grow-1">
-            {description}
-          </p>
-          <div className="d-flex justify-content-between align-items-center mt-1 mb-1 ">
-            <span className="h5 mb-0 text-success d-flex align-items-center gap-1">
+          <p className="card-text">{description}</p>
+          <div className="price-rating">
+            <span className="price">
               <i className="bi bi-currency-rupee"></i>
               {price}
             </span>
-            <span>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-fill text-warning"></i>
-              <i className="bi bi-star-half text-warning"></i>
-              <small className="text-muted ms-1">(4.5)</small>
-            </span>
+            <div className="rating">
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-half"></i>
+              <small>(4.5)</small>
+            </div>
           </div>
         </div>
-        <div className="card-footer d-flex justify-content-between bg-light border-0">
-          <Link
-            className="btn btn-primary btn-sm d-flex align-items-center gap-1"
-            to={`/food/${id}`}
-          >
-            <i className="bi bi-eye"></i> View
+        <div className="card-footer">
+          <Link to={`/food/${id}`} className="btn-view">
+            <i className="bi bi-eye"></i>
+            View
           </Link>
           {quantity[id] > 0 ? (
-            <div className="d-flex align-items-center gap-2">
+            <div className="quantity-controls">
               <button
-                className="btn btn-danger btn-sm"
+                className="btn-quantity btn-decrease"
                 onClick={() => decreaseQty(id)}
               >
-                <i className="bi bi-dash-circle"></i>
+                <i className="bi bi-dash"></i>
               </button>
-              <span className="fw-bold">{quantity[id]}</span>
+              <span className="quantity-number">{quantity[id]}</span>
               <button
-                className="btn btn-success btn-sm"
+                className="btn-quantity btn-increase"
                 onClick={() => increaseQty(id)}
               >
-                <i className="bi bi-plus-circle"></i>
+                <i className="bi bi-plus"></i>
               </button>
             </div>
           ) : (
             <button
-              className="btn btn-sm text-white d-flex align-items-center gap-1 app-btn-gradient"
+              className="btn-add-cart"
               onClick={() => increaseQty(id)}
+              aria-label="Add to cart"
             >
               <i className="bi bi-cart-plus"></i>
             </button>

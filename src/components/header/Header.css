@@ -1,0 +1,119 @@
+.app-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/pattern.svg') repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.app-card {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.app-card h1 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.app-card h1 i {
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.app-card p {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-btn-gradient {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--text-light) !important;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: var(--transition-normal);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.app-btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.app-btn-gradient i {
+  font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-section {
+    min-height: 50vh;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .app-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .app-card h1 {
+    font-size: 2.5rem;
+  }
+
+  .app-card h1 i {
+    font-size: 2.2rem;
+  }
+
+  .app-card p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-card h1 {
+    font-size: 2rem;
+  }
+
+  .app-card h1 i {
+    font-size: 1.8rem;
+  }
+
+  .app-card p {
+    font-size: 1rem;
+  }
+
+  .app-btn-gradient {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://foodiesapi-uep5.onrender.com/api/cart";
+const API_URL = "https://foodrestapii-production.up.railway.app//api/cart";
 
 export const addToCart = async (foodId, token) => {
   try {

@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "https://foodiesapi-uep5.onrender.com/api";
+const API_URL = "https://foodrestapii-production.up.railway.app/api";
 
 export const registerUser = async (userData) => {
   try {
